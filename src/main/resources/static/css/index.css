@@ -1,9 +1,28 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 21 Jan 2023, 16:08:42
-    Author     : menoc
-*/
 
+.block {
+    /*background-image: url(../images/background.png);*/
+    background-color: powderblue;
+    border: 10px solid blue;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.static{
+    position: static;
+    border: 3px solid violet;
+    top:400px;
+    left:500px;
+
+}
+.relative{
+    position: relative;
+    border: 3px solid violet;
+    top:400px;
+    left: 500px;
+    width: 300px;
+    height: 300px;
+
+
+}
