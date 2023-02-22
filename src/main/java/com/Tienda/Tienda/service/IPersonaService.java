@@ -4,10 +4,16 @@
  */
 package com.Tienda.Tienda.service;
 
+import com.Tienda.Tienda.entity.Persona;
+import java.util.List;
+
 /**
  *
  * @author menoc
  */
 public interface IPersonaService {
-    
+    public List<Persona> getALLPersona();
+    public Persona getPersonaById(long id);
+    public void savePersona(Persona persona);
+    public void delete(long id);    
 }
