@@ -10,6 +10,11 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
+    @PostMapping("/save")
+    public String saveUser(@ModelAttribute("concierto") Concierto concierto) {
+        conciertoService.saveConcierto(concierto);
+        return "redirect:/users";
+    }
  * @author menoc
  */
 @Repository
