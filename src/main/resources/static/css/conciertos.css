@@ -5,9 +5,17 @@
 
     background-color: #043343;
 }
+body{
+    background-color: #043343;
+}
+.logo{   
+    width: 165px;
+    height:auto;
+    padding-top: 20px;
+}
 
 h1 {
-    margin-top: 120px;
+    padding-top: 120px;
     color: whitesmoke;
     text-align: center;
 
