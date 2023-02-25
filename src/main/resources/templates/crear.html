@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>    
     <body>
         <h1>Crear Concierto</h1>
-        <form th:action="@{/concierto}" method="post" th:object="${conciertos}">
+        <form th:action="@{/concierto}" method="post" th:object="${concierto}">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" th:field="*{artista}" required>
 
@@ -20,9 +20,10 @@
             <label for="fecha">Capacidad</label>
             <input type="number" id="cap" th:field="*{capacidad}" required>
             <label for="lugar">Lugar:</label>
+           
             <select id="lugar" th:field="*{lugar}" required>
                 <option value="">Seleccione un lugar</option>
-                <option th:each="lugar : ${lugares}" th:value="${lugar.lugar}" th:text="${lugar.lugar}"></option>
+                <option th:each="lugar : ${lugares}" th:value="${lugar.id}" th:text="${lugar.lugar}"></option>
             </select>
 
             <button type="submit">Guardar Concierto</button>

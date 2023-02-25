@@ -32,7 +32,7 @@ public class ConciertoController {
     @GetMapping("/concierto")
     public String index(Model model) {
         List<Concierto> listaConcierto = conciertoService.getAllConcierto();
-        model.addAttribute("titulo", "Tabla Concierto");
+        model.addAttribute("titulo", "Tabla de Eventos");
         model.addAttribute("concierto", listaConcierto);
         return "conciertos";
     }
@@ -40,7 +40,7 @@ public class ConciertoController {
     @GetMapping("/conciertoN")
     public String crearConcierto(Model model) {
         List<Lugar> listaLugar = lugarService.listPlace();
-        model.addAttribute("conciertos", new Concierto());
+        model.addAttribute("concierto", new Concierto());
         model.addAttribute("lugares", listaLugar);
         return "crear";
     }
@@ -51,16 +51,10 @@ public class ConciertoController {
         return "redirect:/concierto";
     }
 
-//    @PostMapping("/concierto")
-//   public String saveUser(@ModelAttribute("concierto") Concierto concierto) {
-//      conciertoService.saveConcierto(concierto);
-//        return "redirect:/concierto";
-//        
-//  }
-//    @PostMapping("/concierto")
-//    public String guardarConcierto(@ModelAttribute("concierto") Concierto concierto) {
-//        conciertoService.saveConcierto(concierto); // Save the Concierto object using the service
-//        return "redirect:/concierto"; // Redirect back to the index page
-//    }
+    @PostMapping("/concierto")
+    public String guardarConcierto(@ModelAttribute("concierto") Concierto concierto) {
+        conciertoService.saveConcierto(concierto); // Save the Concierto object using the service
+        return "redirect:/concierto"; // Redirect back to the index page
+    }
 
 }
