@@ -22,7 +22,7 @@
             <label for="lugar">Lugar:</label>
             <select id="lugar" th:field="*{lugar}" required>
                 <option value="">Seleccione un lugar</option>
-                <option th:each="lugar : ${lugares}" th:value="${lugar.getlugar}" th:text="${lugar.getlugar}"></option>
+                <option th:each="lugar : ${lugares}" th:value="${lugar.lugar}" th:text="${lugar.lugar}"></option>
             </select>
 
             <button type="submit">Guardar Concierto</button>
