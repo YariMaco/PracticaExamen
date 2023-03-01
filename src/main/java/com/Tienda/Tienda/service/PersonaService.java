@@ -7,10 +7,12 @@ import com.Tienda.Tienda.entity.Persona;
 import com.Tienda.Tienda.repository.PersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 /**
  *
  * @author menoc
  */
+@Service
 public class PersonaService implements IPersonaService{
     @Autowired
     private PersonaRepository personaRepository;
